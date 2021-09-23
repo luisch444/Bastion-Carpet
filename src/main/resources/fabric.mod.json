@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "bastion",
+  "version": "${version}",
+
+  "name": "Bastion Carpet",
+  "description": "Carpet addon for Bastion SMP",
+  "authors": [
+    "luisch444"
+  ],
+  "contact": {
+    "homepage": "http://luisch444.xyz/",
+    "sources": "https://github.com/luisch444/Bastion-Carpet"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/bastion/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "bastion.BastionCarpetMod"
+    ]
+  },
+  "mixins": [
+    "bastion.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "carpet": ">=1.4.8",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "Carpet"
+  }
+}

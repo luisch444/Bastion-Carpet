@@ -1,0 +1,12 @@
+bastion/mixin/ExampleMixin.java
+ net.fabricmc.example.mixin.ExampleMixin
+bastion/BastionCarpetSettings.java
+ bastion.BastionCarpetSettings
+bastion/BastionCarpetMod.java
+ bastion.BastionCarpetMod
+bastion/BastionCarpetServer.java
+ bastion.BastionCarpetServer
+bastion/mixin/ZombifiedPiglinEntityMixin.java
+ bastion.mixin.ZombifiedPiglinEntityMixin
+bastion/mixin/CarpetServerMixin.java
+ bastion.mixin.CarpetServerMixin

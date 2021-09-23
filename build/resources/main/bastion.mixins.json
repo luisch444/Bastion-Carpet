@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "bastion.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CarpetServerMixin",
+    "ZombifiedPiglinEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
