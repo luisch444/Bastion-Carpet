@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# Bastion Carpet
 
-## Setup
+## INFO
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+for this proyect I take as example TIS carpet, so if its have code very similar is becase that
 
-## License
+## Bastion SMP
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Bastion SMP is a technical and decorative minecraft server discord: https://discord.gg/x3bVAbQAZt
