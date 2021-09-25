@@ -2,30 +2,35 @@ package bastion;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
+import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.MinecraftServer;
 
-public class BastionCarpetServer implements CarpetExtension {
+public class BastionCarpetServer implements CarpetExtension, ModInitializer {
 
-    public static final BastionCarpetServer INSTANCE = new BastionCarpetServer();
-    public static final String name = BastionCarpetMod.getModId();
-    public static final String fancyName = "Bastion Carpet";
-    public static final String compactName = name;
-    public static MinecraftServer minecraft_server;
+    public static final String compactName = "bastion-carpet";
 
     @Override
     public String version(){
-        return name;
+        return compactName;
     }
 
-    public static void registerExtension(){
-        CarpetServer.manageExtension(INSTANCE);
+    public static void loadExtension()
+    {
+        CarpetServer.manageExtension(new BastionCarpetServer());
     }
 
     @Override
-    public void onGameStarted(){
-        CarpetServer.settingsManager.parseSettingsClass(BastionCarpetSettings.class);
+    public void onInitialize()
+    {
+        BastionCarpetServer.loadExtension();
     }
 
+    @Override
+    public void onGameStarted()
+    {
+        // let's /carpet handle our few simple settings
+        CarpetServer.settingsManager.parseSettingsClass(BastionCarpetSettings.class);
+    }
 
 
 }

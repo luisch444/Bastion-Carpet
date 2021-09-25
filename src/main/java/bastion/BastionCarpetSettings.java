@@ -11,7 +11,7 @@ public class BastionCarpetSettings {
     @Rule(desc = "Zombified Piglin drops enchanted golden apple", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
     public static boolean zombifiedpiglindropsgoldenapple = false;
 
-    @Rule(desc = "Disable lighting fire", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
+    @Rule(desc = "Disable lighting fire", category = {BASTION, FEATURE})
     public static boolean disablelightingfire = false;
 
     @Rule(desc = "Disable lighting", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
