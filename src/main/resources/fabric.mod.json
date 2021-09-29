@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "bastion",
+  "id": "bastion-carpet",
   "version": "${version}",
 
   "name": "Bastion Carpet",
