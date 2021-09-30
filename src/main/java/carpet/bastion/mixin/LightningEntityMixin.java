@@ -1,16 +1,14 @@
-package bastion.mixin;
+package carpet.bastion.mixin;
 
-import bastion.BastionCarpetSettings;
+import carpet.bastion.BastionCarpetSettings;
 import net.minecraft.block.AbstractFireBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,7 +20,6 @@ public abstract class LightningEntityMixin extends Entity {
     @Shadow private boolean cosmetic;
     @Shadow private int ambientTick;
     @Shadow private int remainingActions;
-    @Shadow @Nullable private ServerPlayerEntity channeler;
     @Shadow public long seed;
 
     public LightningEntityMixin (EntityType<? extends LightningEntity> entityType, World world) {

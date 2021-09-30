@@ -6,7 +6,8 @@
   "name": "Bastion Carpet",
   "description": "Carpet addon for Bastion SMP",
   "authors": [
-    "luisch444"
+    "luisch444",
+    "BkManu"
   ],
   "contact": {
     "homepage": "http://luisch444.xyz/",
@@ -19,11 +20,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "bastion.BastionCarpetServer"
+      "carpet.bastion.BastionCarpetServer"
     ]
   },
   "mixins": [
-    "bastion.mixins.json"
+    "bastion-carpet.mixins.json"
   ],
 
   "depends": {

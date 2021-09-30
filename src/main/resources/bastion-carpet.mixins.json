@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "bastion.mixin",
+  "package": "carpet.bastion.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "ZombifiedPiglinEntityMixin",
