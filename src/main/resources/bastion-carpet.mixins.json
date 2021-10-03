@@ -3,8 +3,9 @@
   "package": "carpet.bastion.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ZombifiedPiglinEntityMixin",
-    "LightningEntityMixin"
+    "LightningEntityMixin",
+    "OceanMonumentMixin",
+    "ZombifiedPiglinEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
