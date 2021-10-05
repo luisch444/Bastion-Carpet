@@ -2,7 +2,10 @@ package carpet.bastion;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
+import carpet.bastion.command.CommandSignal;
+import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.server.command.ServerCommandSource;
 
 public class BastionCarpetServer implements CarpetExtension, ModInitializer {
 
@@ -31,5 +34,8 @@ public class BastionCarpetServer implements CarpetExtension, ModInitializer {
         CarpetServer.settingsManager.parseSettingsClass(BastionCarpetSettings.class);
     }
 
-
+    @Override
+    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
+        CommandSignal.register(dispatcher);
+    }
 }
