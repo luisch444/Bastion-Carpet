@@ -5,7 +5,8 @@
   "mixins": [
     "LightningEntityMixin",
     "OceanMonumentMixin",
-    "ZombifiedPiglinEntityMixin"
+    "ZombifiedPiglinEntityMixin",
+    "ThreadedAnvilChunkStorageMixin"
   ],
   "injectors": {
     "defaultRequire": 1

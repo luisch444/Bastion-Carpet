@@ -19,6 +19,9 @@ public class BastionCarpetSettings {
     @Rule(desc = "When storm the elder guardian can spawn", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
     public static boolean elderguardianspawnonthunder = false;
 
+    @Rule(desc = "Can disable bots load new chunks", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
+    public static boolean botsLoadChunks = true;
+
     @Rule(desc = "Enables /signal command to get a container with comparator value.", category = { BASTION, CREATIVE, COMMAND })
     public static boolean commandSignal = false;
 

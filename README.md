@@ -28,6 +28,12 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
   >
   > This option add to the ZombifiedPiglin the drop of EnchantedGoldenApple with very low probability
 
+### Players don't whitelist can't load new chunks [class](/src/main/java/carpet/bastion/mixin/ZombifiedPiglinEntityMixin.java)
+
+> Use: /carpet {setdefault} botsLoadChunks true/false
+>
+>  With this option with false value, the players they aren't on whitelist can't load new chunks but maintains the current chunks loaded. 
+
 ### Enable signal command
 
 > Use: /carpet {setdefault} commandSignal true/false
