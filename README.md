@@ -34,7 +34,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 >
 >  With this option with false value, the players they aren't on whitelist can't load new chunks but maintains the current chunks loaded. 
 
-### Enable signal command
+### Enable signal command [class](/README.md#signal)
 
 > Use: /carpet {setdefault} commandSignal true/false
 >
@@ -42,7 +42,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ## Commands
 
-### Signal
+### Signal [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
 
 > Use: /signal {signalStrength} {barrel}
 >
