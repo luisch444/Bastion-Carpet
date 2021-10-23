@@ -28,7 +28,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
   >
   > This option add to the ZombifiedPiglin the drop of EnchantedGoldenApple with very low probability
 
-### Players don't whitelist can't load new chunks [class](/src/main/java/carpet/bastion/mixin/ZombifiedPiglinEntityMixin.java)
+### Players don't whitelist can't load new chunks [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
 
 > Use: /carpet {setdefault} botsLoadChunks true/false
 >
@@ -42,7 +42,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ## Commands
 
-### Signal [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
+### Signal [class](/src/main/java/carpet/bastion/command/CommandSignal.java)
 
 > Use: /signal {signalStrength} {barrel}
 >
