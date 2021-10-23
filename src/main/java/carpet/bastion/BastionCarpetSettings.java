@@ -13,9 +13,6 @@ public class BastionCarpetSettings {
     @Rule(desc = "Disable lighting fire", category = {BASTION, FEATURE})
     public static boolean disablelightingfire = false;
 
-    @Rule(desc = "Disable lighting", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
-    public static boolean disablelighting = false;
-
     @Rule(desc = "When storm the elder guardian can spawn", category = {BASTION, SURVIVAL, FEATURE, EXPERIMENTAL})
     public static boolean elderguardianspawnonthunder = false;
 
