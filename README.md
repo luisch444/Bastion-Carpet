@@ -34,6 +34,12 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 >
 >  With this option with false value, the players they aren't on whitelist can't load new chunks but maintains the current chunks loaded. 
 
+### It's Halloween!!! [class](/src/main/java/carpet/bastion/mixin/AbstractSkelettonEntityMixin.java)  [class](/src/main/java/carpet/bastion/mixin/ZombieEntityMixin.java)
+
+> Use: /carpet {setdefault} isHalloween true/false
+>
+>  Set to true for mobs to have a chance to appear with carved pumpkin and Jack o'Lantern
+
 ### Enable signal command [class](/README.md#signal)
 
 > Use: /carpet {setdefault} commandSignal true/false
