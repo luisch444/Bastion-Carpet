@@ -1,50 +1,46 @@
 # Bastion Carpet
 
-## INFO
-
-for this proyect I take as example TIS carpet, so if its have code very similar is becase that
-
 ## Bastion SMP
 
 Bastion SMP is a technical and decorative minecraft server: [discord](https://discord.gg/x3bVAbQAZt)
 
 ## Rules
 
-### Elderguardian Spawn on thunder [class](/src/main/java/carpet/bastion/mixin/OceanMonumentMixin.java)
+### Elder guardian Spawn on thunder [class](/src/main/java/carpet/bastion/mixin/OceanMonumentMixin.java)
 
-  > Use: /carpet {setdefault} elderguardianspawnonthunder true/false
-  >
-  > This option add the spawn of Elder Guardians when is Thundering 
+> Use: /carpet {setdefault} elderguardianspawnonthunder true/false
+>
+> This option adds the spawn of Elder Guardians when it's Thundering.
 
 ### Disable Lighting-fire [class](/src/main/java/carpet/bastion/mixin/LightningEntityMixin.java)
 
-  > Use: /carpet {setdefault} disablelightingfire true/false
-  >
-  > This option cancel the fire when a lighting stroke
+> Use: /carpet {setdefault} disablelightingfire true/false
+>
+> This option cancels the fire when a lighting strikes.
 
 ### ZombifiedPiglin Drops EnchantedGoldenApple [class](/src/main/java/carpet/bastion/mixin/ZombifiedPiglinEntityMixin.java)
 
-  > Use: /carpet {setdefault} zombifiedpiglindropsgoldenapple true/false
-  >
-  > This option add to the ZombifiedPiglin the drop of EnchantedGoldenApple with very low probability
+> Use: /carpet {setdefault} zombifiedpiglindropsgoldenapple true/false
+>
+> This option adds the drop of Enchanted Golden Apple with a very low probability to the Zombified Piglin.
 
-### Players don't whitelist can't load new chunks [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
+### Players not whitelisted can't load new chunks. [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
 
 > Use: /carpet {setdefault} botsLoadChunks true/false
 >
->  With this option with false value, the players they aren't on whitelist can't load new chunks but maintains the current chunks loaded. 
+>  When this option is disabled, players that aren't on the whitelist can't load new chunks but maintain the current chunks loaded.
 
 ### It's Halloween!!! [class](/src/main/java/carpet/bastion/mixin/AbstractSkelettonEntityMixin.java)  [class](/src/main/java/carpet/bastion/mixin/ZombieEntityMixin.java)
 
 > Use: /carpet {setdefault} isHalloween true/false
 >
->  Set to true for mobs to have a chance to appear with carved pumpkin and Jack o'Lantern
+>  Set to true for mobs to have a chance to appear with carved pumpkin or Jack o'Lantern.
 
 ### Enable signal command [class](/README.md#signal)
 
 > Use: /carpet {setdefault} commandSignal true/false
 >
-> This option enable the signal command
+> This option enables the signal command.
 
 ## Commands
 
@@ -55,12 +51,12 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 > Parameters:
 > - signalStrength: number between 1 and 897 (both included)
 > - barrel: true/false
-> 
-> Give to player a container with signal specified with 'signalStrengtth'
-> - If barrel is false: 
->  * If signal <= 3: Give you a Cauldron
->  * If signal >3 and <=8: Give you a Composter
->  * If signal > 8: Give you a Barrel
+>
+> 'signalStrengtth' Gives the player a container with an specific redstone signal.
+> - If barrel is false:
+    >  * If signal <= 3: Gives you a Cauldron.
+>  * If signal >3 and <=8: Gives you a Composter.
+>  * If signal > 8: Gives you a Barrel.
 > - If barrel is true:
->  * Give you a Barrel
+    >  * Gives you a Barrel with the specified signal.
 > 
