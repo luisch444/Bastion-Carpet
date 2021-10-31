@@ -38,6 +38,7 @@ public class AlertCommand {
         while(var4.hasNext()) {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)var4.next();
             serverPlayerEntity.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:block.note_block.cow_bell"), SoundCategory.MASTER, serverPlayerEntity.getPos(), 5, 1));
+            serverPlayerEntity.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("block.bell.use"), SoundCategory.MASTER, serverPlayerEntity.getPos(), 5, 1));
             serverPlayerEntity.networkHandler.sendPacket(new TitleS2CPacket(type, Texts.parse(source, new LiteralText(text), serverPlayerEntity, 0)));
         }
 
@@ -50,6 +51,7 @@ public class AlertCommand {
         while(var4.hasNext()) {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)var4.next();
             serverPlayerEntity.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("minecraft:block.note_block.cow_bell"), SoundCategory.MASTER, serverPlayerEntity.getPos(), 5, 1));
+            serverPlayerEntity.networkHandler.sendPacket(new PlaySoundIdS2CPacket(new Identifier("block.bell.use"), SoundCategory.MASTER, serverPlayerEntity.getPos(), 5, 1));
             serverPlayerEntity.networkHandler.sendPacket(new TitleS2CPacket(type, Texts.parse(source, new LiteralText(text), serverPlayerEntity, 0)));
         }
 

@@ -59,4 +59,15 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 >  * If signal > 8: Gives you a Barrel.
 > - If barrel is true:
     >  * Gives you a Barrel with the specified signal.
+
+### Alert [class](/src/main/java/carpet/bastion/command/AlertCommand.java)
+
+>* Use case1: /alert {playerName} "{message}"
+>* Use case2: /alert all {message}
+> 
+>Example: /alert all "Aba viejo" 
+> 
+> Case 1 : Send message to specific player
+> 
+> Case 2 : Send message to all players
 > 
