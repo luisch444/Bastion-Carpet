@@ -3,10 +3,10 @@ package carpet.bastion.rules.timed;
 import carpet.bastion.utils.MCTime;
 import net.minecraft.server.MinecraftServer;
 
-public class GenericTimedRule implements TimedRuleInterface {
+public abstract class AbstractTimedRule implements TimedRuleInterface {
     private final int time;
     private final MCTime unit;
-    public GenericTimedRule(int time, MCTime unit) {
+    public AbstractTimedRule(int time, MCTime unit) {
         this.time = time;
         this.unit = unit;
     }
@@ -20,5 +20,5 @@ public class GenericTimedRule implements TimedRuleInterface {
     }
 
     @Override
-    public void execute(MinecraftServer server) { }
+    public abstract void execute(MinecraftServer server);
 }

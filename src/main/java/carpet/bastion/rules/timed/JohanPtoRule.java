@@ -8,7 +8,7 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.util.Util;
 
 
-public class JohanPtoRule extends GenericTimedRule {
+public class JohanPtoRule extends AbstractTimedRule {
     public JohanPtoRule(int time, MCTime unit) {
         super(time, unit);
     }
