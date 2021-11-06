@@ -37,4 +37,7 @@ public class BastionCarpetSettings {
     @Rule(desc = "Enables /alert command", category = { BASTION, COMMAND })
     public static boolean commandAlert = false;
 
+    @Rule(desc = "Sends the averroes hosting discount message every 20 minutes", category = BASTION)
+    public static boolean discountTimedMessage = false;
+
 }
