@@ -31,6 +31,9 @@ public class BastionCarpetSettings {
     @Rule(desc = "Enables /host command.", category = {BASTION, COMMAND})
     public static boolean hostCommand = false;
 
+    @Rule(desc = "Sends the message 'Johan pto' every 20 minutes.", category = {BASTION, FEATURE})
+    public static boolean isJohanPto = false;
+
     @Rule(desc = "Enables /alert command", category = { BASTION, COMMAND })
     public static boolean commandAlert = false;
 
