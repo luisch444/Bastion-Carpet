@@ -22,6 +22,9 @@ public class BastionCarpetSettings {
     @Rule(desc = "It's Halloween for Mobs", category = {BASTION, CREATIVE, FEATURE, EXPERIMENTAL})
     public static boolean isHalloween = false;
 
+    @Rule(desc = "Bats say UwU on death", category = { BASTION, COMMAND })
+    public static boolean batsSayUwUonDeath = false;
+
     @Rule(desc = "Enables /signal command to get a container with comparator value.", category = { BASTION, CREATIVE, COMMAND })
     public static boolean commandSignal = false;
 
