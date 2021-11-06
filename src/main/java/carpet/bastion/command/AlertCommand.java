@@ -1,5 +1,6 @@
 package carpet.bastion.command;
 
+import carpet.bastion.BastionCarpetSettings;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -23,6 +24,7 @@ public class AlertCommand {
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher){
         dispatcher.register(literal("alert")
+                    .requires(player -> BastionCarpetSettings.commandAlert)
                 .then(argument("player", EntityArgumentType.entities())
                         .then(argument("text", StringArgumentType.string())
                                 .executes(context -> alert((ServerCommandSource)context.getSource(), EntityArgumentType.getPlayers(context, "player"), StringArgumentType.getString(context, "text"), TitleS2CPacket.Action.TITLE))))
