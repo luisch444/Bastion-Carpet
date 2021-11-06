@@ -42,6 +42,12 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 >
 > This option enables the signal command.
 
+### Enable Alert command [class](/README.md#Alert)
+
+> Use: /carpet {setdefault} commandAlert true/false
+>
+> This option enables the alert command.
+
 ## Commands
 
 ### Signal [class](/src/main/java/carpet/bastion/command/CommandSignal.java)
