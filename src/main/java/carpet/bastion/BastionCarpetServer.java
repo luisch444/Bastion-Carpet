@@ -4,8 +4,10 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.bastion.command.AlertCommand;
 import carpet.bastion.command.CommandSignal;
+import carpet.bastion.rules.JohanPtoRule;
 import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 
 public class BastionCarpetServer implements CarpetExtension, ModInitializer {
@@ -39,5 +41,10 @@ public class BastionCarpetServer implements CarpetExtension, ModInitializer {
     public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
         CommandSignal.register(dispatcher);
         AlertCommand.register(dispatcher);
+    }
+
+    @Override
+    public void onTick(MinecraftServer server) {
+        JohanPtoRule.send(server);
     }
 }
