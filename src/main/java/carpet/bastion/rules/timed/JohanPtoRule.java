@@ -18,7 +18,7 @@ public class JohanPtoRule extends GenericTimedRule {
         if (!BastionCarpetSettings.isJohanPto) {
             return;
         }
-        if (server.getTicks() % this.getTime() * this.getUnit().getTime() == 0) {
+        if (server.getTicks() % (this.getTime() * this.getUnit().getTime()) == 0) {
             server.getPlayerManager().broadcastChatMessage(new LiteralText("Johan Pto"), MessageType.CHAT, Util.NIL_UUID);
         }
     }
