@@ -18,7 +18,7 @@ public abstract class BatEntityMixin extends LivingEntity {
         super(entityType, world);
     }
     public void onDeath(DamageSource source) {
-        if(BastionCarpetSettings.batsSayUwUonDeath) {
+        if(BastionCarpetSettings.batsSayUwUonDeath && source.getAttacker()!=null && source.getAttacker().getType()==EntityType.PLAYER) {
             PlayerEntity p = (PlayerEntity) source.getAttacker();
             p.sendMessage(new TranslatableText("UwU").formatted(Formatting.GREEN), false);
         }
