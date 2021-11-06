@@ -31,4 +31,7 @@ public class BastionCarpetSettings {
     @Rule(desc = "Enables /host command.", category = {BASTION, COMMAND})
     public static boolean hostCommand = false;
 
+    @Rule(desc = "Enables /alert command", category = { BASTION, COMMAND })
+    public static boolean commandAlert = false;
+
 }
