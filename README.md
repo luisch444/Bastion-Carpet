@@ -36,13 +36,13 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 >
 >  Set to true for mobs to have a chance to appear with carved pumpkin or Jack o'Lantern.
 
-### Enable signal command [class](/README.md#signal)
+### Enable signal command [command](/README.md#signal-class)
 
 > Use: /carpet {setdefault} commandSignal true/false
 >
 > This option enables the signal command.
 
-### Enable Alert command [class](/README.md#Alert)
+### Enable Alert command [command](/README.md#alert-class)
 
 > Use: /carpet {setdefault} commandAlert true/false
 >
