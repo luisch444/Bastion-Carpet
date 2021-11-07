@@ -14,11 +14,9 @@ public class DescuentoRule extends AbstractTimedRule {
 
     @Override
     public void execute(MinecraftServer server) {
-        if (!BastionCarpetSettings.discountTimedMessage) {
+        if (!BastionCarpetSettings.discountMessage) {
             return;
         }
-        if (server.getTicks() % (this.getTime() * this.getUnit().getTime()) == 0) {
-            server.getPlayerManager().broadcastChatMessage(new LiteralText("20% de descuento con el código abaddon en averroshosting"), MessageType.CHAT, Util.NIL_UUID);
-        }
+        server.getPlayerManager().broadcastChatMessage(new LiteralText("20% de descuento con el código abaddon en averroeshosting"), MessageType.CHAT, Util.NIL_UUID);
     }
 }
