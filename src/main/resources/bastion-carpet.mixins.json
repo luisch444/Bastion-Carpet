@@ -3,13 +3,13 @@
   "package": "carpet.bastion.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "LightningEntityMixin",
-    "OceanMonumentMixin",
-    "ZombifiedPiglinEntityMixin",
-    "ThreadedAnvilChunkStorageMixin",
-    "AbstractSkelettonEntityMixin",
-    "ZombieEntityMixin",
-    "BatEntityMixin"
+    "disableLightingFire.LightningEntityMixin",
+    "elderGuardianSpawnOnThunder.OceanMonumentMixin",
+    "zombifiedPiglinDropsGoldenApple.ZombifiedPiglinEntityMixin",
+    "botsLoadChunks.ThreadedAnvilChunkStorageMixin",
+    "halloween.AbstractSkeletonEntityMixin",
+    "halloween.ZombieEntityMixin",
+    "uwuBat.BatEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

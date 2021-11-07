@@ -7,7 +7,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.Util;
 
-
 public class JohanPtoRule extends AbstractTimedRule {
     public JohanPtoRule(int time, MCTime unit) {
         super(time, unit);
@@ -18,8 +17,6 @@ public class JohanPtoRule extends AbstractTimedRule {
         if (!BastionCarpetSettings.isJohanPto) {
             return;
         }
-        if (server.getTicks() % (this.getTime() * this.getUnit().getTime()) == 0) {
-            server.getPlayerManager().broadcastChatMessage(new LiteralText("Johan Pto"), MessageType.CHAT, Util.NIL_UUID);
-        }
+        server.getPlayerManager().broadcastChatMessage(new LiteralText("Johan Pto"), MessageType.CHAT, Util.NIL_UUID);
     }
 }

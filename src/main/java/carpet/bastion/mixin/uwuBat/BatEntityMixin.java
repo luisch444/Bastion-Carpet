@@ -1,5 +1,4 @@
-package carpet.bastion.mixin;
-
+package carpet.bastion.mixin.uwuBat;
 
 import carpet.bastion.BastionCarpetSettings;
 import net.minecraft.entity.EntityType;
@@ -17,9 +16,10 @@ public abstract class BatEntityMixin extends LivingEntity {
     protected BatEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
     }
+
     @Override
     public void onDeath(DamageSource source) {
-        if(BastionCarpetSettings.batsSayUwUonDeath && source.getAttacker()!=null && source.getAttacker().getType()==EntityType.PLAYER) {
+        if (BastionCarpetSettings.batsSayUwUOnDeath && source.getAttacker() != null && source.getAttacker().getType() == EntityType.PLAYER) {
             PlayerEntity p = (PlayerEntity) source.getAttacker();
             p.sendMessage(new TranslatableText("UwU").formatted(Formatting.GREEN), false);
         }

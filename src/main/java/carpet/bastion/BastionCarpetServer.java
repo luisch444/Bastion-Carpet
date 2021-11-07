@@ -3,12 +3,12 @@ package carpet.bastion;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.bastion.command.AlertCommand;
-import carpet.bastion.command.CommandSignal;
+import carpet.bastion.command.SignalCommand;
 import carpet.bastion.command.HostCommand;
 import carpet.bastion.command.IPCommand;
+import carpet.bastion.rules.timed.AbstractTimedRule;
 import carpet.bastion.rules.timed.DescuentoRule;
 import carpet.bastion.rules.timed.JohanPtoRule;
-import carpet.bastion.rules.timed.TimedRuleInterface;
 import carpet.bastion.utils.MCTime;
 import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
@@ -19,29 +19,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BastionCarpetServer implements CarpetExtension, ModInitializer {
-
     public static final String compactName = "bastion-carpet";
-    private final List<TimedRuleInterface> timedRules = new ArrayList<>();
+    private final List<AbstractTimedRule> timedRules = new ArrayList<>();
 
     @Override
-    public String version(){
+    public String version() {
         return compactName;
     }
 
-    public static void loadExtension()
-    {
+    public static void loadExtension() {
         CarpetServer.manageExtension(new BastionCarpetServer());
     }
 
     @Override
-    public void onInitialize()
-    {
+    public void onInitialize() {
         BastionCarpetServer.loadExtension();
     }
 
     @Override
-    public void onGameStarted()
-    {
+    public void onGameStarted() {
         // let's /carpet handle our few simple settings
         CarpetServer.settingsManager.parseSettingsClass(BastionCarpetSettings.class);
 
@@ -51,7 +47,7 @@ public class BastionCarpetServer implements CarpetExtension, ModInitializer {
 
     @Override
     public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {
-        CommandSignal.register(dispatcher);
+        SignalCommand.register(dispatcher);
         AlertCommand.register(dispatcher);
         IPCommand.register(dispatcher);
         HostCommand.register(dispatcher);
@@ -59,6 +55,10 @@ public class BastionCarpetServer implements CarpetExtension, ModInitializer {
 
     @Override
     public void onTick(MinecraftServer server) {
-        timedRules.forEach(timedRule -> timedRule.execute(server));
+        timedRules.forEach(timedRule -> {
+            if (server.getTicks() % (timedRule.getTime() * timedRule.getUnit().getTime()) == 0) {
+                timedRule.execute(server);
+            }
+        });
     }
 }

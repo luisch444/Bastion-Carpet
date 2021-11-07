@@ -19,24 +19,22 @@ import net.minecraft.util.registry.Registry;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
-public class CommandSignal {
-
+public class SignalCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        LiteralArgumentBuilder<ServerCommandSource> literalArgumentBuilder = literal("signal")
-                .requires((player) -> player.hasPermissionLevel(2) && BastionCarpetSettings.commandSignal)
-                .then(argument("value", IntegerArgumentType.integer(1, 897))
-                        .executes(context -> execute(context.getSource(), IntegerArgumentType.getInteger(context, "value"), false))
-                        .then(argument("barrel", BoolArgumentType.bool())
-                                .executes(context -> execute(context.getSource(), IntegerArgumentType.getInteger(context, "value"), BoolArgumentType.getBool(context, "barrel")))
-                        )
-                );
+        LiteralArgumentBuilder<ServerCommandSource> literalArgumentBuilder = literal("signal").
+                requires((player) -> player.hasPermissionLevel(2) && BastionCarpetSettings.signalCommand).
+                then(argument("value", IntegerArgumentType.integer(1, 897)).
+                        executes(context -> execute(context.getSource(), IntegerArgumentType.getInteger(context, "value"), false)).
+                        then(argument("barrel", BoolArgumentType.bool()).
+                                executes(context -> execute(context.getSource(), IntegerArgumentType.getInteger(context, "value"), BoolArgumentType.getBool(context, "barrel")))));
 
         dispatcher.register(literalArgumentBuilder);
     }
 
     private static int execute(ServerCommandSource source, int value, boolean barrel) throws CommandSyntaxException {
-        if (!BastionCarpetSettings.commandSignal || source == null)
+        if (!BastionCarpetSettings.signalCommand || source == null) {
             return 0;
+        }
 
         ItemStack item;
         CompoundTag tags = new CompoundTag();
@@ -54,13 +52,12 @@ public class CommandSignal {
             item = Items.BARREL.getDefaultStack();
             ListTag itemsTag = new ListTag();
 
-
             if (value == 1) {
-                itemsTag.add(getCompundag(0, 1));
+                itemsTag.add(getCompoundTag(0, 1));
             }
             else {
                 for (int slot = 0, count = (int) Math.ceil(27 * (value - 1) / 14D); count > 0; slot++, count -= 64) {
-                    itemsTag.add(getCompundag(slot, count));
+                    itemsTag.add(getCompoundTag(slot, count));
                 }
             }
 
@@ -78,7 +75,7 @@ public class CommandSignal {
         return 1;
     }
 
-    private static CompoundTag getCompundag(int slot, int count) {
+    private static CompoundTag getCompoundTag(int slot, int count) {
         CompoundTag slotTag = new CompoundTag();
         slotTag.putByte("Slot", (byte) slot);
         slotTag.putString("id", Registry.ITEM.getId(Items.WHITE_SHULKER_BOX).toString());

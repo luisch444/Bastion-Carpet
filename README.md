@@ -6,39 +6,39 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ## Rules
 
-### Elder guardian Spawn on thunder [class](/src/main/java/carpet/bastion/mixin/OceanMonumentMixin.java)
+### Elder guardian Spawn on thunder [class](/src/main/java/carpet/bastion/mixin/elderGuardianSpawnOnThunder/OceanMonumentMixin.java)
 
-> Use: /carpet {setdefault} elderguardianspawnonthunder true/false
+> Use: /carpet {setdefault} elderGuardianSpawnOnThunder true/false
 >
 > This option adds the spawn of Elder Guardians when it's Thundering.
 
-### Disable Lighting-fire [class](/src/main/java/carpet/bastion/mixin/LightningEntityMixin.java)
+### Disable Lighting-fire [class](/src/main/java/carpet/bastion/mixin/disableLightingFire/LightningEntityMixin.java)
 
-> Use: /carpet {setdefault} disablelightingfire true/false
+> Use: /carpet {setdefault} disableLightingFire true/false
 >
 > This option cancels the fire when a lighting strikes.
 
-### ZombifiedPiglin Drops EnchantedGoldenApple [class](/src/main/java/carpet/bastion/mixin/ZombifiedPiglinEntityMixin.java)
+### ZombifiedPiglin Drops EnchantedGoldenApple [class](/src/main/java/carpet/bastion/mixin/zombifiedPiglinDropsGoldenApple/ZombifiedPiglinEntityMixin.java)
 
-> Use: /carpet {setdefault} zombifiedpiglindropsgoldenapple true/false
+> Use: /carpet {setdefault} zombifiedPiglinDropsGoldenApple true/false
 >
 > This option adds the drop of Enchanted Golden Apple with a very low probability to the Zombified Piglin.
 
-### Players not whitelisted can't load new chunks. [class](/src/main/java/carpet/bastion/mixin/ThreadedAnvilChunkStorageMixin.java)
+### Players not whitelisted can't load new chunks. [class](/src/main/java/carpet/bastion/mixin/botsLoadChunks/ThreadedAnvilChunkStorageMixin.java)
 
 > Use: /carpet {setdefault} botsLoadChunks true/false
 >
 >  When this option is disabled, players that aren't on the whitelist can't load new chunks but maintain the current chunks loaded.
 
-### It's Halloween!!! [class](/src/main/java/carpet/bastion/mixin/AbstractSkelettonEntityMixin.java)  [class](/src/main/java/carpet/bastion/mixin/ZombieEntityMixin.java)
+### It's Halloween!!! [class](/src/main/java/carpet/bastion/mixin/halloween/AbstractSkeletonEntityMixin.java)  [class](/src/main/java/carpet/bastion/mixin/halloween/ZombieEntityMixin.java)
 
 > Use: /carpet {setdefault} isHalloween true/false
 >
 >  Set to true for mobs to have a chance to appear with carved pumpkin or Jack o'Lantern.
 
-### Bats say UwU on Death [class](/src/main/java/carpet/bastion/mixin/BatEntityMixin.java)
+### Bats say UwU on Death [class](/src/main/java/carpet/bastion/mixin/uwuBat/BatEntityMixin.java)
 
-> Use: /carpet {setdefault} batsSayUwUonDeath true/false
+> Use: /carpet {setdefault} batsSayUwUOnDeath true/false
 >
 > Bats say UwU in the chat when dies
 
@@ -50,19 +50,19 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ### Averroes Hosting Discount [class](/src/main/java/carpet/bastion/rules/timed/DescuentoRule.java)
 
-> Use: /carpet {setdefault} discountTimedMessage true/false
+> Use: /carpet {setdefault} discountMessage true/false
 >
 > Sends the averroes hosting discount message every 20 minutes
 
 ### Enable signal command [use](/README.md#signal-class)
 
-> Use: /carpet {setdefault} commandSignal true/false
+> Use: /carpet {setdefault} signalCommand true/false
 >
 > This option enables the signal command.
 
 ### Enable Alert command [use](/README.md#alert-class)
 
-> Use: /carpet {setdefault} commandAlert true/false
+> Use: /carpet {setdefault} alertCommand true/false
 >
 > This option enables the alert command.
 
@@ -80,7 +80,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ## Commands
 
-### Signal [class](/src/main/java/carpet/bastion/command/CommandSignal.java)
+### Signal [class](/src/main/java/carpet/bastion/command/SignalCommand.java)
 
 > Use: /signal {signalStrength} {barrel}
 >
@@ -88,7 +88,7 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 > - signalStrength: number between 1 and 897 (both included)
 > - barrel: true/false
 >
-> 'signalStrengtth' Gives the player a container with an specific redstone signal.
+> 'signalStrength' Gives the player a container with a specific redstone signal.
 > - If barrel is false:
     >  * If signal <= 3: Gives you a Cauldron.
 >  * If signal >3 and <=8: Gives you a Composter.
@@ -98,9 +98,9 @@ Bastion SMP is a technical and decorative minecraft server: [discord](https://di
 
 ### Alert [class](/src/main/java/carpet/bastion/command/HostCommand.java)
 
->* Use case1: /alert {playerName} "{message}"
+>* Use case1: /alert {playerName} {message}
 > 
->Example: /alert all "Aba viejo" 
+>Example: /alert all Aba viejo
 > 
 > Case 1 : Send message to specific player
 > 
